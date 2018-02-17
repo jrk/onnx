@@ -30,3 +30,18 @@ env:
     - USE_NINJA=true
     - ONNX_ML=1 USE_NINJA=false
     - ONNX_ML=1 USE_NINJA=true
+
+matrix:
+  include:
+    - env: BUILD=osx
+      os: osx
+      osx_image: xcode8.3
+      compiler: clang
+    - env: BUILD=osx-ios
+      os: osx
+      osx_image: xcode8.3
+      compiler: clang
+    - env: BUILD=osx-android
+      os: osx
+      osx_image: xcode8.3
+      compiler: clang
